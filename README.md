@@ -1,5 +1,4 @@
-# DevSentinel — Product Requirements Document
-
+# DevSentinel — Multi-Agent Pull Request Review & Automated Remediation Engine
 ## 1. Overview
 
 DevSentinel is an automated code-review agent for pull requests. When a
