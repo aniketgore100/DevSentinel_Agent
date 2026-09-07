@@ -5,7 +5,7 @@
 from typing import Literal, Optional
 from pydantic import BaseModel
 
-ReviewAction = Literal["opened", "syncronize"]
+ReviewAction = Literal["opened", "synchronize"]
 
 class ReviewJob(BaseModel):
     job_id :str
@@ -15,7 +15,6 @@ class ReviewJob(BaseModel):
     title : str
     head_sha : str
     base_sha : str
-    diff_url : str
     diff_url : str
     author : str
     is_private : bool

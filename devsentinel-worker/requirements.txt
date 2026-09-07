@@ -1,5 +1,6 @@
 upstash-redis
-anthropic
+openai
 pygithub
 python-dotenv
 pydantic
+requests

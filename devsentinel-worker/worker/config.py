@@ -10,7 +10,7 @@ load_dotenv()
 REQUIRED_VARS = [
     "UPSTASH_REDIS_REST_URL",
     "UPSTASH_REDIS_REST_TOKEN",
-    "ANTHROPIC_API_KEY",
+    "OPENAI_API_KEY",
     "GITHUB_TOKEN"
 ]
 
@@ -18,7 +18,7 @@ REQUIRED_VARS = [
 class Config:
     upstash_redis_url:str
     upstash_redis_token:str
-    anthropic_api_key:str
+    openai_api_key:str
     github_token:str
     poll_interval_seconds:int
     queue_key:str
@@ -32,7 +32,7 @@ def load_config() -> Config:
     return Config(
         upstash_redis_url=os.environ["UPSTASH_REDIS_REST_URL"].strip(),
         upstash_redis_token=os.environ["UPSTASH_REDIS_REST_TOKEN"].strip(),
-        anthropic_api_key=os.environ["ANTHROPIC_API_KEY"].strip(),
+        openai_api_key=os.environ["OPENAI_API_KEY"].strip(),
         github_token=os.environ["GITHUB_TOKEN"].strip(),
         poll_interval_seconds=int(os.environ.get("POLL_INTERVAL_SECONDS", "5")),
         queue_key=os.environ.get("QUEUE_KEY", "pr_review_queue"),
