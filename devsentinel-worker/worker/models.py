@@ -5,12 +5,12 @@
 from typing import Literal, Optional
 from pydantic import BaseModel
 
-ReviewAction = Literal["Opened", "syncronize"]
+ReviewAction = Literal["opened", "syncronize"]
 
 class ReviewJob(BaseModel):
     job_id :str
     repo : str
-    pr_number :str
+    pr_number :int
     action : ReviewAction
     title : str
     head_sha : str
